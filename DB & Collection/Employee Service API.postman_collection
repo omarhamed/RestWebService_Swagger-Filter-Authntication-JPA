@@ -1,0 +1,261 @@
+{
+	"info": {
+		"_postman_id": "458161aa-800e-4ba1-bf9c-26876b88d548",
+		"name": "RestWebService API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All Employees",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/employees",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"employees"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Employee By ID",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/swagger-ui/#/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"swagger-ui",
+						""
+					],
+					"hash": "/"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add New Employee",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "admin123",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<Employee>\r\n\t<email>sw21@gmail.com</email>\r\n\t<name>sw21</name>\r\n</Employee>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/employees/save",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"employees",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Employee By ID",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "default",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/employees/delete/7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"employees",
+						"delete",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Swagger API",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v2/api-docs",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v2",
+						"api-docs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Swagger API UI",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/swagger-ui/#/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"swagger-ui",
+						""
+					],
+					"hash": "/"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Spring Actuator",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/actuator",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"actuator"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Spring-data-rest-hal-browser",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/browser/index.html",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"browser",
+						"index.html"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Static Filter",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "admin123",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/filter1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"filter1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
